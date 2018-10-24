@@ -22,8 +22,8 @@ namespace PointsClient.Scrollable
 
             _manager = new PointsManager(pointsHandler, new DialogService());
 
-            UpdatePoints();
-
+            From = DateTime.Now.Ticks;
+            To = DateTime.Now.AddHours(2).Ticks;
             Formatter = x => new DateTime((long) x).ToString("t");
         }
 
